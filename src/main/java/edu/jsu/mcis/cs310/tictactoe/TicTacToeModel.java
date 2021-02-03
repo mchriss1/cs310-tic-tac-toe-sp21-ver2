@@ -353,7 +353,7 @@ return flag == false;
             output.append(r);
         }
         
-        output.append("   ");
+        output.append("\n");
         
         for(int r = 0; r < dimension; ++r) {
             
