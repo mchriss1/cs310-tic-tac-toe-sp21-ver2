@@ -1,5 +1,7 @@
 package edu.jsu.mcis.cs310.tictactoe;
 
+import java.util.*;
+
 /**
 * TicTacToeController implements the Controller for the Tic-Tac-Toe game.
 *
@@ -46,6 +48,25 @@ public class TicTacToeController {
         /* MAIN LOOP (repeats until game is over) */
 
         // INSERT YOUR CODE HERE
+        while (model.isGameover() == false) {
+			
+            view.showBoard(model.toString());
+            
+            TicTacToeMove move = view.getNextMove(model.isXTurn());
+            int row = move.getRow();
+            int col = move.getCol(); 
+            
+            boolean isValidMove = model.makeMark(row, col);
+			
+            if (isValidMove == false) {
+                view.showInputError();
+            }
+          
+        }
+        
+        
+        
+        
         
         /* Display Results and Exit */
 

@@ -1,6 +1,7 @@
 package edu.jsu.mcis.cs310.tictactoe;
 
 import java.util.Scanner;
+import java.util.*;
 
 /**
 * TicTacToeView implements a console-based View for the Tic-Tac-Toe game.
@@ -38,10 +39,23 @@ public class TicTacToeView {
     * @see             TicTacToeMove
     */
     public TicTacToeMove getNextMove(boolean isXTurn) {
-        
-        // INSERT YOUR CODE HERE (refer to the example output on Canvas!)
-        
-        return null; // this is a stub; you should remove it later!
+    // INSERT YOUR CODE HERE (refer to the example output on Canvas!)
+        if(isXTurn) {
+                System.out.println("Player 1 (X) move:\n");
+        }
+
+            else {
+                System.out.println("Player 2 (O) move:\n");
+            } 
+
+
+        System.out.print("Enter the row and column numbers, separated by a space: ");
+            int row = keyboard.nextInt();
+            int col = keyboard.nextInt();
+            
+            TicTacToeMove move = new TicTacToeMove(row, col);
+            return move;
+     //return null; // this is a stub; you should remove it later!
 
     }
     
@@ -59,9 +73,9 @@ public class TicTacToeView {
     /**
     * This method prints the final result of the Tic-Tac-Toe game to the
     * console: the current state, appended by an exclamation point, on a line by
-    * itself.  (The result is provided as a String by the {@link TicTacToeModel}
-    * class's {@link TicTacToeModel#getState()} method; this method simply
-    * outputs it to the console.)
+    * itself.(The result is provided as a String by the {@link TicTacToeModel}
+ class's {@link TicTacToeModel#getState()} method; this method simply
+ outputs it to the console.)
     * 
     * @param  result  the result of the game, from {@link TicTacToeModel#getState()}
     */
