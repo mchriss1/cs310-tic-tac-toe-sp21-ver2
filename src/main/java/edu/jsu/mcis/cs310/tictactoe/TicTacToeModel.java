@@ -358,7 +358,7 @@ return flag == false;
         for(int r = 0; r < dimension; ++r) {
             
              output.append(r);
-             output.append(" ");
+             output.append(" " + " ");
           
             for(int c = 0; c < dimension; ++c) {
                
