@@ -103,7 +103,13 @@ public class TicTacToeView extends JPanel {
     public void updateSquares() {
 
         // INSERT YOUR CODE HERE
-        this.board[row][col].setText(controller.getSquareAsString(row, col));
+        for(int row = 0; row < board.length; ++row) {
+
+            for(int col = 0; col < board.length; ++col) {
+                
+                this.board[row][col].setText(controller.getSquareAsString(row, col));
+            }
+        }
     }
     
     /**
