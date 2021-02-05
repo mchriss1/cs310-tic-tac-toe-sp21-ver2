@@ -18,7 +18,7 @@ public class TicTacToeView extends JPanel {
     
     private final TicTacToeController controller;
     private int dimension;
-    
+
 
     private JButton[][] board;
     private JPanel squaresPanel;
@@ -103,7 +103,7 @@ public class TicTacToeView extends JPanel {
     public void updateSquares() {
 
         // INSERT YOUR CODE HERE
-        this.board[r][c].setText(controller.getSquareAsString(row, col));
+        this.board[row][col].setText(controller.getSquareAsString(row, col));
     }
     
     /**
@@ -116,11 +116,11 @@ public class TicTacToeView extends JPanel {
     public void disableSquares() {
     
         // INSERT YOUR CODE HERE
-       for (int r = 0; r < dimension; ++r) {
+       for (int row = 0; row < dimension; ++row) {
 
-            for (c = 0; c < dimension; ++c) {
+            for (col = 0; col < dimension; ++col) {
 
-                this.board[r][c].setEnabled(false);
+                this.board[row][col].setEnabled(false);
             }
        }     
     }
