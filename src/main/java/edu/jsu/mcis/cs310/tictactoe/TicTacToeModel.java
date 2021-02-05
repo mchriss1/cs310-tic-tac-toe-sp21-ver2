@@ -342,7 +342,7 @@ for(int r = 0; r < dimension; r++) {
           
             for(int c = 0; c < dimension; ++c) {
                
-                output.append(board[c][r]);
+                output.append(board[r][c]);
                   
             }
              
