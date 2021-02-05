@@ -17,6 +17,8 @@ import javax.swing.*;
 public class TicTacToeView extends JPanel {
     
     private final TicTacToeController controller;
+    private int dimension;
+    
 
     private JButton[][] board;
     private JPanel squaresPanel;
@@ -32,7 +34,8 @@ public class TicTacToeView extends JPanel {
     public TicTacToeView(TicTacToeController controller, int dimension) {
 
         this.controller = controller;
-        
+        this.dimension = dimension;
+
         /* Initialize GUI Elements and Containers */
 
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));        
@@ -49,7 +52,7 @@ public class TicTacToeView extends JPanel {
                 
                 board[r][c] = new JButton(); 
                 board[r][c].addActionListener(controller);
-                board[r][c].setName("Square" + i + j); // Assign button names
+                board[r][c].setName("Square" + r + c); // Assign button names
                 board[r][c].setPreferredSize(new Dimension(64,64));
                 squaresPanel.add(board[r][c]);
                 
