@@ -52,7 +52,7 @@ public class TicTacToeView extends JPanel {
                 
                 board[row][col] = new JButton(); 
                 board[row][col].addActionListener(controller);
-                board[row][col].setName("Square" + r + c); // Assign button names
+                board[row][col].setName("Square" + row + col); // Assign button names
                 board[row][col].setPreferredSize(new Dimension(64,64));
                 squaresPanel.add(board[row][col]);
                 
