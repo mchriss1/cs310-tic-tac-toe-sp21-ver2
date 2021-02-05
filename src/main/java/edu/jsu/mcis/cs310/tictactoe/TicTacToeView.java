@@ -43,15 +43,15 @@ public class TicTacToeView extends JPanel {
         
         /* Create Button Array */
         
-        for (int i = 0; i < dimension; ++i) {
+        for (int r = 0; r < dimension; ++r) {
             
-            for (int j = 0; j < dimension; ++j) {
+            for (int c = 0; c < dimension; ++c) {
                 
-                board[i][j] = new JButton(); 
-                board[i][j].addActionListener(controller);
-                board[i][j].setName("Square" + i + j); // Assign button names
-                board[i][j].setPreferredSize(new Dimension(64,64));
-                squaresPanel.add(board[i][j]);
+                board[r][c] = new JButton(); 
+                board[r][c].addActionListener(controller);
+                board[r][c].setName("Square" + i + j); // Assign button names
+                board[r][c].setPreferredSize(new Dimension(64,64));
+                squaresPanel.add(board[r][c]);
                 
             }
             
@@ -100,7 +100,7 @@ public class TicTacToeView extends JPanel {
     public void updateSquares() {
 
         // INSERT YOUR CODE HERE
-        this.board[i][j].setEnabled.setText(controller.getSquareAsString(row, col));
+        this.board[r][c].setText(controller.getSquareAsString(row, col));
     }
     
     /**
@@ -113,11 +113,11 @@ public class TicTacToeView extends JPanel {
     public void disableSquares() {
     
         // INSERT YOUR CODE HERE
-       for (int i = 0; i < dimension; ++i) {
+       for (int r = 0; r < dimension; ++r) {
 
-            for (j = 0; j < dimension; ++j) {
+            for (c = 0; c < dimension; ++c) {
 
-                this.board[i][j].setEnabled(false);
+                this.board[r][c].setEnabled(false);
             }
        }     
     }
