@@ -6,7 +6,7 @@ import java.util.*;
 /**
 * TicTacToeView implements a console-based View for the Tic-Tac-Toe game.
 *
-* @author  Your Name
+* @author  Martez Christian
 * @version 1.0
 */
 public class TicTacToeView {
@@ -39,13 +39,13 @@ public class TicTacToeView {
     * @see             TicTacToeMove
     */
     public TicTacToeMove getNextMove(boolean isXTurn) {
-    // INSERT YOUR CODE HERE (refer to the example output on Canvas!)
+   
         if(isXTurn) {
-                System.out.println("Player 1 (X) move:\n");
+                System.out.println("Player 1 (X) Move:\n");
         }
 
             else {
-                System.out.println("Player 2 (O) move:\n");
+                System.out.println("Player 2 (O) Move:\n");
             } 
 
         
@@ -56,8 +56,6 @@ public class TicTacToeView {
             
             TicTacToeMove move = new TicTacToeMove(row, col);
             return move;
-     //return null; // this is a stub; you should remove it later!
-
     }
     
     /**

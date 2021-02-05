@@ -5,7 +5,7 @@ import java.util.*;
 /**
 * TicTacToeController implements the Controller for the Tic-Tac-Toe game.
 *
-* @author  Your Name
+* @author  Martez Christian
 * @version 1.0
 */
 public class TicTacToeController {
@@ -47,7 +47,6 @@ public class TicTacToeController {
     
         /* MAIN LOOP (repeats until game is over) */
 
-        // INSERT YOUR CODE HERE
         while (model.isGameover() == false) {
 			
             view.showBoard(model.toString());
