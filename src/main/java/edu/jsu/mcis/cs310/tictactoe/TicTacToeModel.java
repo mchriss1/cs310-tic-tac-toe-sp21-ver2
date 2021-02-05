@@ -196,10 +196,10 @@ for(int r = 0; r < dimension; r++) {
 
     for(int c = 0; c < dimension; c++) {
 
-        if(board[r][c] != mark)
+        if(board[c][r] != mark)
                 break;
 
-            if(c == (dimension - 1) && board[r][c] == mark) {
+            if(c == (dimension - 1) && board[c][r] == mark) {
                     flag = false;
             }
     }
@@ -342,7 +342,7 @@ for(int r = 0; r < dimension; r++) {
           
             for(int c = 0; c < dimension; ++c) {
                
-                output.append(board[r][c]);
+                output.append(board[c][r]);
                   
             }
              
