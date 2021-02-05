@@ -347,6 +347,8 @@ return flag == false;
     public String toString() {
         
         StringBuilder output = new StringBuilder();
+        output.append("  ");
+
        // INSERT YOUR CODE HERE    //.append
         for (int r = 0; r < dimension; ++r){
             
@@ -358,16 +360,18 @@ return flag == false;
         for(int r = 0; r < dimension; ++r) {
             
              output.append(r);
-             output.append(" " + " ");
+             output.append(" ");
           
             for(int c = 0; c < dimension; ++c) {
                
-                output.append("-");
+                output.append(board[r][c]);
                   
             }
              
              output.append("\n");
         }
+
+        output.append("\n");
      
         return output.toString();
         
