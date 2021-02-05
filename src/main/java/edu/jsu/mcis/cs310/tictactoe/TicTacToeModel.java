@@ -327,7 +327,6 @@ for(int r = 0; r < dimension; r++) {
         
         StringBuilder output = new StringBuilder();
         output.append("  ");       
-
         for (int r = 0; r < dimension; ++r) {
             
             output.append(r);
@@ -348,7 +347,6 @@ for(int r = 0; r < dimension; r++) {
              
              output.append("\n");         
         }
-
         output.append("\n");
      
         return output.toString();
